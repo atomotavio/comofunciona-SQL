@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        description="Esta página tem o intuito de ensinar didaticamente os conceitos em volta da linguagem SQL utilizando o sistema de gerenciamento de banco de dados MySQL.">
+    <title>Como funciona: MySQL</title>
+</head>
+
+<body>
+    <h1>O que é SQL?</h1>
+    <p>O <strong>SQL</strong> - <i>Structured query Language (Linguagem de consulta estruturada)</i>, é conhecida
+        comercialmente como uma linguagem de consultada padrão utilizada para manipular base de dados relacionais.</p>
+    <p>Porém, o SQL possui mais recursos além de consultas ao banco de dados, são eles:
+    <ul>
+        <li>Data definition language (DDL);</li>
+        <li>Data manipulation language (DML);</li>
+        <li>Data query language (DQL);</li>
+        <li>Data control language (DCL);</li>
+        <li>Data transaction language (DTL)</li>
+    </ul>
+    Não se preocupe no momento com o que significam cada um deles pois trataremos de todos ao longo desse curso.
+    </p>
+
+    <h2>Data definition language</h2>
+    <p>No contexto de SQL, é a sintaxe para criar e modificar objetos do banco de dados como tabelas, índices e
+        usuários. As instruções DDL são semelhantes a uma linguagem de programação de computador para definir estruturas
+        de dados, especialmente esquemas de banco de dados.</p>
+    <p>Alguns exemplos comuns de instruções DDL:
+    <ul>
+        <li>CREATE;</li>
+        <li>ALTER;</li>
+        <li>DROP</li>
+    </ul>
+    </p>
+    <p>Muitas linguagens de descrição de dados usam uma sintaxe declarativa para definir colunas e tipos de dados. A
+        linguagem SQL no entanto, usa uma coleção de verbos imperativos para modificar o esquema do banco de dados
+        adicionando, alterando ou excluindo definições de tabelas ou outros elementos. Essas instruções podem ser
+        misturadas livremente com outras instruções SQL, o que nao torna o DDL uma linguagem separada.</p>
+
+    <h3>Comando CREATE</h3>
+    <p>O comando create é utilizado para estabelecer um novo banco de dados, tabela etc.</p>
+    <code>CREATE DATABASE nome_do_banco;</code>
+    <p><strong><i>Importante lembrar que para que os comandos SQL sejam executados é necessário o uso do ; ao final.</i></strong></p>
+    <p> Ao criar um banco de dados podemos também utilizar um comando opcional chamado <i>IF NOT EXISTS</i>, que permite
+        ao MySQL verificar se o nome escolhido já está sendo utilizado no servidor e evita que retorne um erro com a
+        possível existencia de dois bancos com o mesmo nome.</p>
+    <code>CREATE DATABASE IF NOT EXISTS nome_do_banco;</code>
+
+    <h3>Comando DROP</h3>
+    <p>O comando drop destrói uma tabela, índice etc existentes no banco de dados.</p>
+    <code>DROP TABLE nome_da_tabela; </code>
+
+    <h3>Comando ALTER</h3>
+    <p>O comando alter altera um objeto existente no banco de dados.</p>
+    <code>ALTER TABLE clientes <br>
+        ADD Email varchar(255);</code>
+    <p>Podemos utilizar o comando after para especificar a posição da coluna que desejamos acrescentar na tabela.</p>
+    <code>ALTER TABLE clientes <br>
+        ADD telefone char(9) NOT NULL ALTER email;</code>
+    
+    <h3>Comando TRUNCATE</h3>
+    <p>É usado para deletar todos os dados de uma tabela. Ele é mais rapido que o delete.</p>
+</body>
+
+</html>
