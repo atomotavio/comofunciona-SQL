@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         description="Esta página tem o intuito de ensinar didaticamente os conceitos em volta da linguagem SQL utilizando o sistema de gerenciamento de banco de dados MySQL.">
-    <title>Como funciona: MySQL</title>
+    <title>Como funciona: SQL</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -20,65 +20,61 @@
 
 <body style="font-family: 'Fira Sans', sans-serif;" class="row">
 
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#sql">SQL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <nav class="nav flex-column col-2">
+    <nav class="nav flex-column col-2 bg-light">
         <li class="nav-item">
-            <a class="nav-link" href="#ddl">
+            <a class="text-dark nav-link" href="#sql">
+                O que é SQL?
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="text-dark nav-link" href="#ddl">
                 DDL
             </a>
             <ul style="list-style: none;">
-                <li><a class="nav-item" href="#create">CREATE</a></li>
-                <li><a class="nav-item" href="#drop">DROP</a></li>
-                <li><a class="nav-item" href="#alter">ALTER</a></li>
-                <li><a class="nav-item" href="#truncate">TRUNCATE</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#create">CREATE</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#drop">DROP</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#alter">ALTER</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#truncate">TRUNCATE</a></li>
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#dql">
+            <a class="text-dark nav-link" href="#dql">
                 DQL
             </a>
             <ul style="list-style: none;">
-                <li><a class="nav-item" href="#select">SELECT</a></li>
-                <li><a class="nav-item" href="#distinct">DISTINCT</a></li>
-                <li><a class="nav-item" href="#all">ALL</a></li>
-                <li><a class="nav-item" href="#orderby">ORDER BY</a></li>
-                <li><a class="nav-item" href="#limit">LIMIT</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#select">SELECT</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#distinct">DISTINCT</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#all">ALL</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#orderby">ORDER BY</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#limit">LIMIT</a></li>
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#dml">
+            <a class="text-dark nav-link" href="#dml">
                 DML
             </a>
             <ul style="list-style: none;">
-                <li><a class="nav-item" href="#delete">DELETE</a></li>
-                <li><a class="nav-item" href="#insert">INSERT</a></li>
-                <li><a class="nav-item" href="#update">UPDATE</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#delete">DELETE</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#insert">INSERT</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#update">UPDATE</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="text-dark nav-link" href="#dado">
+                Tipos de dados
+            </a>
+            <ul style="list-style: none;">
+                <li><a class="text-dark text-decoration-none nav-item" href="#delete">DELETE</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#insert">INSERT</a></li>
+                <li><a class="text-dark text-decoration-none nav-item" href="#update">UPDATE</a></li>
             </ul>
         </li>
     </nav>
 
 
-    <div class="col-10">
+    <div class="col-10 border-start pe-5">
 
-        <div class="container-fluid">
+        <div class="container-fluid pt-3">
             <h1 id="sql">O que é SQL?</h1>
             <p>O <strong>SQL</strong> - <i>Structured query Language (Linguagem de consulta estruturada)</i>, é
                 conhecida
@@ -97,7 +93,7 @@
             </p>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid pt-3">
             <h2 id="ddl">Data definition language</h2>
             <p>No contexto de SQL, é a sintaxe para criar e modificar objetos do banco de dados como tabelas, índices e
                 usuários. As instruções DDL são semelhantes a uma linguagem de programação de computador para definir
@@ -122,7 +118,7 @@
         <div class="container-fluid">
             <h3 id="create">Comando CREATE</h3>
             <p>O comando create é utilizado para estabelecer um novo banco de dados, tabela etc.</p>
-            <p><code>CREATE DATABASE nome_do_banco;</code></p>
+            <p class="bg-light col-6"><code>CREATE DATABASE nome_do_banco;</code></p>
             <p><strong><i>Importante lembrar que para que os comandos SQL sejam executados é necessário o uso do ; ao
                         final.</i></strong></p>
             <p> Ao criar um banco de dados podemos também utilizar um comando opcional chamado <i>IF NOT EXISTS</i>, que
@@ -130,24 +126,24 @@
                 ao MySQL verificar se o nome escolhido já está sendo utilizado no servidor e evita que retorne um erro
                 com a
                 possível existencia de dois bancos com o mesmo nome.</p>
-            <p><code>CREATE DATABASE IF NOT EXISTS nome_do_banco;</code></p>
+            <p class="bg-light col-6"><code>CREATE DATABASE IF NOT EXISTS nome_do_banco;</code></p>
         </div>
 
         <div class="container-fluid">
             <h3 id="drop">Comando DROP</h3>
             <p>O comando drop destrói uma tabela, índice etc existentes no banco de dados.</p>
-            <p><code>DROP TABLE nome_da_tabela; </code></p>
+            <p class="bg-light col-6"><code>DROP TABLE nome_da_tabela; </code></p>
         </div>
 
         <div class="container-fluid">
             <h3 id="alter">Comando ALTER</h3>
             <p>O comando alter altera um objeto existente no banco de dados.</p>
-            <p><code>ALTER TABLE clientes <br>
+            <p class="bg-light col-6"><code>ALTER TABLE clientes <br>
         ADD Email varchar(255);</code></p>
             <p>Podemos utilizar o comando after para especificar a posição da coluna que desejamos acrescentar na
                 tabela.
             </p>
-            <p><code>ALTER TABLE clientes <br>
+            <p class="bg-light col-6"><code>ALTER TABLE clientes <br>
         ADD telefone char(9) NOT NULL ALTER email;</code></p>
         </div>
 
@@ -162,13 +158,13 @@
                 deve
                 ser
                 utilizado com cautela.</p>
-            <p><code>TRUNCATE TABLE clientes;</code></p>
+            <p class="bg-light col-6"><code>TRUNCATE TABLE clientes;</code></p>
         </div>
 
         <div class="container-fluid">
             <h4>Visualizar tabelas de um servidor</h4>
             <p>Voce pode visualizar uma lista de todos os bancos de dados do servidor com o comando:</p>
-            <p><code>SHOW DATABASES;</code></p>
+            <p class="bg-light col-6"><code>SHOW DATABASES;</code></p>
         </div>
 
         <div class="container-fluid">
@@ -176,14 +172,14 @@
             <p>O primeiro passo é selecionar o banco de dados que será usado, precisaremos dessa informação para
                 continuar
                 aprendendo sobre a linguagem:</p>
-            <p><code>USE banco_de_dados; <br>
+            <p class="bg-light col-6"><code>USE banco_de_dados; <br>
         CREATE TABLE contatos( <br>
         nome VARCHAR (50) NOT NULL, <br>
         telefone VARCHAR (25) <br>
     );</code></p>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid pt-3">
             <h2 id="dql">Data Query Language</h2>
             <p>O objetivo de armazenar dados em um banco é a possibilidade de reperar e utilizá-los em um relatório para
                 análises mais profundas.</p>
@@ -194,10 +190,10 @@
             <p>É utilizado para fazer consultas, selecionando os dados devemos dizer ao SGBD de onde queremos selecionar
                 através
                 do comando <strong>FROM</strong></p>
-            <p><code>SELECT * FROM contatos;</code></p>
+            <p class="bg-light col-6"><code>SELECT * FROM contatos;</code></p>
             <p><i>O símbolo de * significa todos.</i></p>
             <p>Para especificarmos ainda mais podemos utilizar o comando:</p>
-            <p><code>SELECT nome, sobrenome <br>
+            <p class="bg-light col-6"><code>SELECT nome, sobrenome <br>
         FROM contatos <br>
         WHERE nome =´Bruno´;</code></p>
         </div>
@@ -205,19 +201,19 @@
         <div class="container-fluid">
             <h3 id="distinct">Comando DISTINCT</h3>
             <p>Ele é utilizado para selecionar todos os dados sem considerar suas repetições.</p>
-            <p><code>SELECT DISTINCT sobrenome FROM contatos;</code></p>
+            <p class="bg-light col-6"><code>SELECT DISTINCT sobrenome FROM contatos;</code></p>
         </div>
 
         <div class="container-fluid">
             <h3 id="all">Comando ALL</h3>
             <p>Ele é utilizado para selecionar todos os dados incluindo suas repetições.</p>
-            <p><code>SELECT ALL sobrenome FROM contatos;</code></p>
+            <p class="bg-light col-6"><code>SELECT ALL sobrenome FROM contatos;</code></p>
         </div>
 
         <div class="container-fluid">
             <h3 id="orderby">Comando ORDER BY</h3>
             <p>Retorna os comandos em ordem ascendente(ASC) ou descendente(DESC), sendo o padrão ascendente.</p>
-            <p><code>SELECT name FROM contatos ORDER BY nome DESC;</code></p>
+            <p class="bg-light col-6"><code>SELECT name FROM contatos ORDER BY nome DESC;</code></p>
         </div>
 
         <div class="container-fluid">
@@ -225,11 +221,11 @@
             <p>Utilizado para retornar o numero de linhas especificado. Se o valor inicial for informado, aquelas linhas
                 são
                 puladas antes do dado ser retornado. Lembrando que a primeira linha é o 0.</p>
-            <p><code>SELECT * FROM contatos LIMIT 3,1;</code></p>
+            <p class="bg-light col-6"><code>SELECT * FROM contatos LIMIT 3,1;</code></p>
             <p>Podemos incrementar as consultas utilizando uma série de funções.</p>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid pt-3">
             <h2 id="dml">Data Manipulation Language</h2>
             <p>É o conjunto de comandos que nos fornecem a possibilidade de inserir, alterar, deletar e atualizar os
                 registros
@@ -241,14 +237,15 @@
             <p>É usado para deletar todos os registros de uma tabela. O que acontece é que o comando DELETE quando
                 utilizado
                 armazena os dados em uma tabela temporária e, quando o rollback é aplicado ele restaura esses dados.</p>
-            <p><code>DELETE FROM clientes; <br>
+            <p class="bg-light col-6"><code>DELETE FROM clientes; <br>
         commit;</code></p>
         </div>
 
         <div class="container-fluid">
             <h3 id="insert">Comando INSERT</h3>
             <p>É utilizado para inserir novos registros em uma tabela do banco de dados.</p>
-            <p><code>INSERT INTO funcionarios (id, nome, cargo) VALUES (1, 'Fernando', 'Analista de Sistemas');</code>
+            <p class="bg-light col-6">
+                <code>INSERT INTO funcionarios (id, nome, cargo) VALUES (1, 'Fernando', 'Analista de Sistemas');</code>
             </p>
         </div>
 
@@ -259,8 +256,17 @@
                 conjunto com o comando <strong>WHERE</strong> que especifica o local da tabela que terá seus dados
                 modificados.
             </p>
-            <p><code>UPDATE funcionarios SET cargo = 'Analista de Sistemas e Aplicações' WHERE id = 1;</code></p>
+            <p class="bg-light col-6">
+                <code>UPDATE funcionarios SET cargo = 'Analista de Sistemas e Aplicações' WHERE id = 1;</code>
+            </p>
 
+        </div>
+
+        <div class="container-fluid pt-3">
+            <h2 id="dado">Tipos de dados</h2>
+            <p>No SQL, cada variável local, expressão ou parâmetro tem um tipo de dado relacionado. É um atributo que
+                especifica o tipo de dado que o objeto pode manter: dados inteiros,
+                dados de caractere, dados monetários, data e hora, cadeiasx de caracteres binárias etc.</p>
         </div>
     </div>
 

@@ -1,2 +1,3 @@
 https://blog.betrybe.com/sql/
 https://www.devmedia.com.br/guia/guia-completo-de-sql/38314
+https://docs.microsoft.com/pt-br/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16
