@@ -7,3 +7,7 @@ body {
 img {
     width: 50px;
 }
+
+code {
+    color: red;
+}
